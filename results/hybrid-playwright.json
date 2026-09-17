@@ -1,0 +1,226 @@
+{
+  "summary": {
+    "backend": "hybrid needle3->openrouter/deepseek-v4.1-flash",
+    "cases": 30,
+    "verified_actions": 18,
+    "success_rate": 0.6,
+    "latency_ms_mean": 7967.439169890713,
+    "latency_ms_p50": 1885.967998940032,
+    "actions_per_minute": 7.5306505290611465,
+    "needle_cases": 20,
+    "escalated_cases": 10,
+    "note": "Conservative escalation for ambiguous prompts because shipped Needle confidence is None."
+  },
+  "runs": [
+    {
+      "prompt": "Click login",
+      "route": "needle",
+      "ok": true,
+      "elapsed_ms": 436.6303849965334,
+      "error": null
+    },
+    {
+      "prompt": "Click help",
+      "route": "needle",
+      "ok": true,
+      "elapsed_ms": 412.59121301118284,
+      "error": null
+    },
+    {
+      "prompt": "Type Enschede in search",
+      "route": "needle",
+      "ok": false,
+      "elapsed_ms": 30374.881303985603,
+      "error": "Locator.click: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator(\"#Enschede\")\n"
+    },
+    {
+      "prompt": "Scroll down",
+      "route": "needle",
+      "ok": true,
+      "elapsed_ms": 305.166695965454,
+      "error": null
+    },
+    {
+      "prompt": "Click the primary action on this unfamiliar page",
+      "route": "deepseek",
+      "ok": false,
+      "elapsed_ms": 7889.819412957877,
+      "error": null
+    },
+    {
+      "prompt": "Do the safest thing with the page",
+      "route": "deepseek",
+      "ok": false,
+      "elapsed_ms": 3323.2682779198512,
+      "error": null
+    },
+    {
+      "prompt": "Click login",
+      "route": "needle",
+      "ok": true,
+      "elapsed_ms": 375.96391304396093,
+      "error": null
+    },
+    {
+      "prompt": "Click help",
+      "route": "needle",
+      "ok": true,
+      "elapsed_ms": 381.62341399583966,
+      "error": null
+    },
+    {
+      "prompt": "Type Enschede in search",
+      "route": "needle",
+      "ok": false,
+      "elapsed_ms": 30379.67170297634,
+      "error": "Locator.click: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator(\"#Enschede\")\n"
+    },
+    {
+      "prompt": "Scroll down",
+      "route": "needle",
+      "ok": true,
+      "elapsed_ms": 349.89802702330053,
+      "error": null
+    },
+    {
+      "prompt": "Click the primary action on this unfamiliar page",
+      "route": "deepseek",
+      "ok": false,
+      "elapsed_ms": 5748.338376055472,
+      "error": null
+    },
+    {
+      "prompt": "Do the safest thing with the page",
+      "route": "deepseek",
+      "ok": true,
+      "elapsed_ms": 3985.5698130559176,
+      "error": null
+    },
+    {
+      "prompt": "Click login",
+      "route": "needle",
+      "ok": true,
+      "elapsed_ms": 390.6895569525659,
+      "error": null
+    },
+    {
+      "prompt": "Click help",
+      "route": "needle",
+      "ok": true,
+      "elapsed_ms": 364.8346570553258,
+      "error": null
+    },
+    {
+      "prompt": "Type Enschede in search",
+      "route": "needle",
+      "ok": false,
+      "elapsed_ms": 30374.825717997737,
+      "error": "Locator.click: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator(\"#Enschede\")\n"
+    },
+    {
+      "prompt": "Scroll down",
+      "route": "needle",
+      "ok": true,
+      "elapsed_ms": 331.6970500163734,
+      "error": null
+    },
+    {
+      "prompt": "Click the primary action on this unfamiliar page",
+      "route": "deepseek",
+      "ok": false,
+      "elapsed_ms": 29953.889431082644,
+      "error": null
+    },
+    {
+      "prompt": "Do the safest thing with the page",
+      "route": "deepseek",
+      "ok": false,
+      "elapsed_ms": 3990.842658909969,
+      "error": null
+    },
+    {
+      "prompt": "Click login",
+      "route": "needle",
+      "ok": true,
+      "elapsed_ms": 385.95822907518595,
+      "error": null
+    },
+    {
+      "prompt": "Click help",
+      "route": "needle",
+      "ok": true,
+      "elapsed_ms": 431.5156319644302,
+      "error": null
+    },
+    {
+      "prompt": "Type Enschede in search",
+      "route": "needle",
+      "ok": false,
+      "elapsed_ms": 30375.092640984803,
+      "error": "Locator.click: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator(\"#Enschede\")\n"
+    },
+    {
+      "prompt": "Scroll down",
+      "route": "needle",
+      "ok": true,
+      "elapsed_ms": 330.3535389713943,
+      "error": null
+    },
+    {
+      "prompt": "Click the primary action on this unfamiliar page",
+      "route": "deepseek",
+      "ok": true,
+      "elapsed_ms": 4476.183369988576,
+      "error": null
+    },
+    {
+      "prompt": "Do the safest thing with the page",
+      "route": "deepseek",
+      "ok": true,
+      "elapsed_ms": 4702.364837983623,
+      "error": null
+    },
+    {
+      "prompt": "Click login",
+      "route": "needle",
+      "ok": true,
+      "elapsed_ms": 338.3859029272571,
+      "error": null
+    },
+    {
+      "prompt": "Click help",
+      "route": "needle",
+      "ok": true,
+      "elapsed_ms": 448.6677199602127,
+      "error": null
+    },
+    {
+      "prompt": "Type Enschede in search",
+      "route": "needle",
+      "ok": false,
+      "elapsed_ms": 30361.872600973584,
+      "error": "Locator.click: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator(\"#Enschede\")\n"
+    },
+    {
+      "prompt": "Scroll down",
+      "route": "needle",
+      "ok": true,
+      "elapsed_ms": 333.52627290878445,
+      "error": null
+    },
+    {
+      "prompt": "Click the primary action on this unfamiliar page",
+      "route": "deepseek",
+      "ok": false,
+      "elapsed_ms": 8350.881629972719,
+      "error": null
+    },
+    {
+      "prompt": "Do the safest thing with the page",
+      "route": "deepseek",
+      "ok": false,
+      "elapsed_ms": 9118.171114008874,
+      "error": null
+    }
+  ]
+}
