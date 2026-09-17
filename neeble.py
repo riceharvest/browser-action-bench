@@ -18,20 +18,26 @@ def main() -> None:
             desc = spec.get('description', name)
             params = spec.get('parameters', {})
             if name == 'click_element':
-                def tool(element_id: str): return {'verified': False, 'arguments': {'element_id': element_id}}
+                def tool(element_id: str): return {'_action': 'click_element', 'arguments': {'element_id': element_id}, 'verified': False}
             elif name == 'type_text':
-                def tool(element_id: str, text: str): return {'verified': False, 'arguments': {'element_id': element_id, 'text': text}}
+                def tool(element_id: str, text: str): return {'_action': 'type_text', 'arguments': {'element_id': element_id, 'text': text}, 'verified': False}
             elif name == 'scroll':
-                def tool(direction: str): return {'verified': False, 'arguments': {'direction': direction}}
+                def tool(direction: str): return {'_action': 'scroll', 'arguments': {'direction': direction}, 'verified': False}
             else:
-                def tool(): return {'verified': False, 'arguments': {}}
+                def tool(): return {'_action': name, 'arguments': {}, 'verified': False}
             tool.__name__, tool.__doc__ = name, desc
             tools.append(needle.tool(tool))
         agent = needle.Needle(tools=tools, weights=args.weights)
         result = agent.run(req.get('goal', ''), max_new_tokens=args.max_new_tokens)
-        # Never allow the policy layer to claim verification: the browser executor must confirm it.
         result['verified'] = False
         result['needs_executor_verification'] = True
+        state = req.get('state')
+        if state and result.get('results'):
+            candidate = result['results'][0]
+            action = {'name': candidate.get('_action'), 'arguments': candidate.get('arguments', {})}
+            verdict = verify_action(action, state)
+            result['legal_for_state'] = verdict.ok
+            result['verification_reason'] = verdict.reason
         print(json.dumps(result), flush=True)
 
 if __name__ == '__main__': main()
