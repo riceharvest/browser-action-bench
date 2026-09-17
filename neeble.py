@@ -25,7 +25,14 @@ class BrowserExecutor:
         elif name == 'forward': page.go_forward()
         elif name == 'reload': page.reload()
         elif name == 'click_element': page.locator('#' + args['element_id']).click()
+        elif name == 'double_click': page.locator('#' + args['element_id']).dblclick()
+        elif name == 'right_click': page.locator('#' + args['element_id']).click(button='right')
+        elif name == 'hover': page.locator('#' + args['element_id']).hover()
         elif name == 'type_text': page.locator('#' + args['element_id']).fill(args['text'])
+        elif name == 'press': page.locator('#' + args['element_id']).press(args['key'])
+        elif name == 'scroll_into_view': page.locator('#' + args['element_id']).scroll_into_view_if_needed()
+        elif name == 'new_tab': self.browser.contexts[0].new_page()
+        elif name == 'close_tab': page.close()
         elif name == 'clear': page.locator('#' + args['element_id']).fill('')
         elif name == 'focus': page.locator('#' + args['element_id']).focus()
         elif name == 'blur': page.locator('#' + args['element_id']).blur()
@@ -62,8 +69,10 @@ def main() -> None:
             name = spec['name']
             desc = spec.get('description', name)
             params = spec.get('parameters', {})
-            if name == 'click_element':
-                def tool(element_id: str): return {'_action': 'click_element', 'arguments': {'element_id': element_id}, 'verified': False}
+            if name in {'click_element', 'double_click', 'right_click', 'hover', 'scroll_into_view'}:
+                def tool(element_id: str): return {'_action': name, 'arguments': {'element_id': element_id}, 'verified': False}
+            elif name == 'press':
+                def tool(element_id: str, key: str): return {'_action': 'press', 'arguments': {'element_id': element_id, 'key': key}, 'verified': False}
             elif name == 'goto':
                 def tool(url: str): return {'_action': 'goto', 'arguments': {'url': url}, 'verified': False}
             elif name == 'back':
