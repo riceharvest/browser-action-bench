@@ -16,8 +16,14 @@ def main() -> None:
             name = spec['name']
             desc = spec.get('description', name)
             params = spec.get('parameters', {})
-            # Needle's decorator derives schemas from annotations; dynamic tools use a generic call.
-            def tool(_name=name, **kwargs): return {'verified': False, 'arguments': kwargs}
+            if name == 'click_element':
+                def tool(element_id: str): return {'verified': False, 'arguments': {'element_id': element_id}}
+            elif name == 'type_text':
+                def tool(element_id: str, text: str): return {'verified': False, 'arguments': {'element_id': element_id, 'text': text}}
+            elif name == 'scroll':
+                def tool(direction: str): return {'verified': False, 'arguments': {'direction': direction}}
+            else:
+                def tool(): return {'verified': False, 'arguments': {}}
             tool.__name__, tool.__doc__ = name, desc
             tools.append(needle.tool(tool))
         agent = needle.Needle(tools=tools, weights=args.weights)
