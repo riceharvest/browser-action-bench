@@ -1,0 +1,223 @@
+{
+  "summary": {
+    "backend": "openrouter/deepseek/deepseek-v4.1-flash",
+    "cases": 30,
+    "verified_actions": 30,
+    "success_rate": 1.0,
+    "latency_ms_mean": 2124.4877872173674,
+    "latency_ms_p50": 2014.4959135213867,
+    "actions_per_minute": 28.24210163080645
+  },
+  "runs": [
+    {
+      "prompt": "Click the login button with element id login",
+      "expected": "click_element",
+      "ok": true,
+      "elapsed_ms": 2383.30055703409,
+      "error": null
+    },
+    {
+      "prompt": "Type Enschede into the search field with element id search",
+      "expected": "type_text",
+      "ok": true,
+      "elapsed_ms": 2745.4257670324296,
+      "error": null
+    },
+    {
+      "prompt": "Scroll down the page",
+      "expected": "scroll",
+      "ok": true,
+      "elapsed_ms": 1440.0902279885486,
+      "error": null
+    },
+    {
+      "prompt": "Click the login button with element id login",
+      "expected": "click_element",
+      "ok": true,
+      "elapsed_ms": 2273.588575073518,
+      "error": null
+    },
+    {
+      "prompt": "Type Enschede into the search field with element id search",
+      "expected": "type_text",
+      "ok": true,
+      "elapsed_ms": 2266.263858997263,
+      "error": null
+    },
+    {
+      "prompt": "Scroll down the page",
+      "expected": "scroll",
+      "ok": true,
+      "elapsed_ms": 2175.1182220177725,
+      "error": null
+    },
+    {
+      "prompt": "Click the login button with element id login",
+      "expected": "click_element",
+      "ok": true,
+      "elapsed_ms": 2036.7700780043378,
+      "error": null
+    },
+    {
+      "prompt": "Type Enschede into the search field with element id search",
+      "expected": "type_text",
+      "ok": true,
+      "elapsed_ms": 1430.3810760611668,
+      "error": null
+    },
+    {
+      "prompt": "Scroll down the page",
+      "expected": "scroll",
+      "ok": true,
+      "elapsed_ms": 1353.5597930895165,
+      "error": null
+    },
+    {
+      "prompt": "Click the login button with element id login",
+      "expected": "click_element",
+      "ok": true,
+      "elapsed_ms": 1712.0944709749892,
+      "error": null
+    },
+    {
+      "prompt": "Type Enschede into the search field with element id search",
+      "expected": "type_text",
+      "ok": true,
+      "elapsed_ms": 1701.628610957414,
+      "error": null
+    },
+    {
+      "prompt": "Scroll down the page",
+      "expected": "scroll",
+      "ok": true,
+      "elapsed_ms": 1943.2450850727037,
+      "error": null
+    },
+    {
+      "prompt": "Click the login button with element id login",
+      "expected": "click_element",
+      "ok": true,
+      "elapsed_ms": 2218.096039025113,
+      "error": null
+    },
+    {
+      "prompt": "Type Enschede into the search field with element id search",
+      "expected": "type_text",
+      "ok": true,
+      "elapsed_ms": 4976.223204052076,
+      "error": null
+    },
+    {
+      "prompt": "Scroll down the page",
+      "expected": "scroll",
+      "ok": true,
+      "elapsed_ms": 1802.262966055423,
+      "error": null
+    },
+    {
+      "prompt": "Click the login button with element id login",
+      "expected": "click_element",
+      "ok": true,
+      "elapsed_ms": 2067.482325946912,
+      "error": null
+    },
+    {
+      "prompt": "Type Enschede into the search field with element id search",
+      "expected": "type_text",
+      "ok": true,
+      "elapsed_ms": 2137.3634960036725,
+      "error": null
+    },
+    {
+      "prompt": "Scroll down the page",
+      "expected": "scroll",
+      "ok": true,
+      "elapsed_ms": 2271.948577952571,
+      "error": null
+    },
+    {
+      "prompt": "Click the login button with element id login",
+      "expected": "click_element",
+      "ok": true,
+      "elapsed_ms": 1702.9959170613438,
+      "error": null
+    },
+    {
+      "prompt": "Type Enschede into the search field with element id search",
+      "expected": "type_text",
+      "ok": true,
+      "elapsed_ms": 1563.9201269950718,
+      "error": null
+    },
+    {
+      "prompt": "Scroll down the page",
+      "expected": "scroll",
+      "ok": true,
+      "elapsed_ms": 1554.6896130545065,
+      "error": null
+    },
+    {
+      "prompt": "Click the login button with element id login",
+      "expected": "click_element",
+      "ok": true,
+      "elapsed_ms": 2027.4966530269012,
+      "error": null
+    },
+    {
+      "prompt": "Type Enschede into the search field with element id search",
+      "expected": "type_text",
+      "ok": true,
+      "elapsed_ms": 2001.4951740158722,
+      "error": null
+    },
+    {
+      "prompt": "Scroll down the page",
+      "expected": "scroll",
+      "ok": true,
+      "elapsed_ms": 2448.013268993236,
+      "error": null
+    },
+    {
+      "prompt": "Click the login button with element id login",
+      "expected": "click_element",
+      "ok": true,
+      "elapsed_ms": 1363.6484360322356,
+      "error": null
+    },
+    {
+      "prompt": "Type Enschede into the search field with element id search",
+      "expected": "type_text",
+      "ok": true,
+      "elapsed_ms": 5374.784194980748,
+      "error": null
+    },
+    {
+      "prompt": "Scroll down the page",
+      "expected": "scroll",
+      "ok": true,
+      "elapsed_ms": 2046.479960088618,
+      "error": null
+    },
+    {
+      "prompt": "Click the login button with element id login",
+      "expected": "click_element",
+      "ok": true,
+      "elapsed_ms": 1542.7962209796533,
+      "error": null
+    },
+    {
+      "prompt": "Type Enschede into the search field with element id search",
+      "expected": "type_text",
+      "ok": true,
+      "elapsed_ms": 1758.659873972647,
+      "error": null
+    },
+    {
+      "prompt": "Scroll down the page",
+      "expected": "scroll",
+      "ok": true,
+      "elapsed_ms": 1414.8112459806725,
+      "error": null
+    }
+  ]
+}
