@@ -19,9 +19,9 @@ def verify_action(action: dict[str, Any], state: dict[str, Any]) -> Verification
     elements = {e.get("id"): e for e in state.get("elements", []) if isinstance(e, dict)}
     def resolve_element_id(raw: Any) -> str | None:
         if raw in elements: return raw
-        needle_text = str(raw).lower().replace(' button', '').strip()
+        needle_text = str(raw).lower().replace(' button', '').replace(' ', '').strip()
         for element_id, element in elements.items():
-            label = str(element.get('text', '')).lower().strip()
+            label = str(element.get('text', '')).lower().replace(' ', '').strip()
             if needle_text and (needle_text == label or needle_text in label): return element_id
         return None
 
