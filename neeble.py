@@ -27,9 +27,11 @@ class BrowserExecutor:
         elif name == 'click_element': page.locator('#' + args['element_id']).click()
         elif name == 'type_text': page.locator('#' + args['element_id']).fill(args['text'])
         elif name == 'scroll': page.evaluate('window.scrollTo(0, document.body.scrollHeight)')
+        elif name == 'snapshot': pass
         elif name == 'wait': page.wait_for_timeout(int(args.get('ms', 100)))
         else: return {'verified': False, 'error': 'executor does not implement action'}
-        return {'verified': True, 'url': page.url, 'title': page.title(), 'pages': len(pages)}
+        elements = page.locator('button, input, textarea, select, a, [role]').evaluate_all("els => els.slice(0, 100).map((e,i) => ({id:e.id || 'el-'+i, role:e.getAttribute('role') || e.tagName.toLowerCase(), text:(e.innerText || e.getAttribute('aria-label') || '').slice(0,160), visible:!!(e.offsetWidth || e.offsetHeight)}))")
+        return {'verified': True, 'url': page.url, 'title': page.title(), 'pages': len(pages), 'state': {'url': page.url, 'elements': elements}}
 
     def close(self): self.pw.stop()
 
