@@ -26,7 +26,13 @@ class BrowserExecutor:
         elif name == 'reload': page.reload()
         elif name == 'click_element': page.locator('#' + args['element_id']).click()
         elif name == 'type_text': page.locator('#' + args['element_id']).fill(args['text'])
-        elif name == 'scroll': page.evaluate('window.scrollTo(0, document.body.scrollHeight)')
+        elif name == 'clear': page.locator('#' + args['element_id']).fill('')
+        elif name == 'focus': page.locator('#' + args['element_id']).focus()
+        elif name == 'blur': page.locator('#' + args['element_id']).blur()
+        elif name == 'check': page.locator('#' + args['element_id']).check()
+        elif name == 'uncheck': page.locator('#' + args['element_id']).uncheck()
+        elif name == 'select_option': page.locator('#' + args['element_id']).select_option(args['value'])
+        elif name == 'scroll': page.evaluate("window.scrollBy(0, arguments[0])", int(args.get('amount', 700)))
         elif name == 'snapshot': pass
         elif name == 'wait': page.wait_for_timeout(int(args.get('ms', 100)))
         else: return {'verified': False, 'error': 'executor does not implement action'}
