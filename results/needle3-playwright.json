@@ -1,0 +1,336 @@
+{
+  "summary": {
+    "backend": "needle3-playwright-chromium",
+    "cases": 40,
+    "verified_actions": 40,
+    "success_rate": 1.0,
+    "latency_ms_mean": 368.4624814399285,
+    "latency_ms_p50": 357.1807515108958,
+    "actions_per_minute": 162.83883169196417,
+    "prefill_tps_median": 1196.1,
+    "decode_tps_median": 472.54999999999995,
+    "note": "Real headless Chromium fixture with verified DOM actions."
+  },
+  "runs": [
+    {
+      "ms": 471.18090104777366,
+      "success": true,
+      "verified": true,
+      "prefill_tps": 848.4,
+      "decode_tps": 467.0,
+      "prompt": "Click the login button with element id login"
+    },
+    {
+      "ms": 351.00559901911765,
+      "success": true,
+      "verified": true,
+      "prefill_tps": 1382.5,
+      "decode_tps": 578.1,
+      "prompt": "Type Enschede into the search field with element id search"
+    },
+    {
+      "ms": 319.09264193382114,
+      "success": true,
+      "verified": true,
+      "prefill_tps": 1582.2,
+      "decode_tps": 551.2,
+      "prompt": "Scroll down the page"
+    },
+    {
+      "ms": 374.4937439914793,
+      "success": true,
+      "verified": true,
+      "prefill_tps": 1149.7,
+      "decode_tps": 529.5,
+      "prompt": "Click the login button with element id login"
+    },
+    {
+      "ms": 421.7577129602432,
+      "success": true,
+      "verified": true,
+      "prefill_tps": 1174.8,
+      "decode_tps": 456.5,
+      "prompt": "Type Enschede into the search field with element id search"
+    },
+    {
+      "ms": 301.5238210791722,
+      "success": true,
+      "verified": true,
+      "prefill_tps": 1490.4,
+      "decode_tps": 570.3,
+      "prompt": "Scroll down the page"
+    },
+    {
+      "ms": 378.24910692870617,
+      "success": true,
+      "verified": true,
+      "prefill_tps": 990.3,
+      "decode_tps": 465.3,
+      "prompt": "Click the login button with element id login"
+    },
+    {
+      "ms": 371.14095501601696,
+      "success": true,
+      "verified": true,
+      "prefill_tps": 1573.6,
+      "decode_tps": 563.7,
+      "prompt": "Type Enschede into the search field with element id search"
+    },
+    {
+      "ms": 354.2260490357876,
+      "success": true,
+      "verified": true,
+      "prefill_tps": 1204.6,
+      "decode_tps": 440.6,
+      "prompt": "Scroll down the page"
+    },
+    {
+      "ms": 427.61061002966017,
+      "success": true,
+      "verified": true,
+      "prefill_tps": 1213.9,
+      "decode_tps": 471.4,
+      "prompt": "Click the login button with element id login"
+    },
+    {
+      "ms": 412.32155391480774,
+      "success": true,
+      "verified": true,
+      "prefill_tps": 1166.1,
+      "decode_tps": 464.9,
+      "prompt": "Type Enschede into the search field with element id search"
+    },
+    {
+      "ms": 353.19629800505936,
+      "success": true,
+      "verified": true,
+      "prefill_tps": 1233.1,
+      "decode_tps": 447.2,
+      "prompt": "Scroll down the page"
+    },
+    {
+      "ms": 349.5447600726038,
+      "success": true,
+      "verified": true,
+      "prefill_tps": 1485.2,
+      "decode_tps": 589.6,
+      "prompt": "Click the login button with element id login"
+    },
+    {
+      "ms": 356.39388498384506,
+      "success": true,
+      "verified": true,
+      "prefill_tps": 1259.0,
+      "decode_tps": 571.8,
+      "prompt": "Type Enschede into the search field with element id search"
+    },
+    {
+      "ms": 318.88558506034315,
+      "success": true,
+      "verified": true,
+      "prefill_tps": 1230.0,
+      "decode_tps": 439.8,
+      "prompt": "Scroll down the page"
+    },
+    {
+      "ms": 379.89243993069977,
+      "success": true,
+      "verified": true,
+      "prefill_tps": 1180.1,
+      "decode_tps": 470.7,
+      "prompt": "Click the login button with element id login"
+    },
+    {
+      "ms": 380.14209805987775,
+      "success": true,
+      "verified": true,
+      "prefill_tps": 1161.4,
+      "decode_tps": 455.6,
+      "prompt": "Type Enschede into the search field with element id search"
+    },
+    {
+      "ms": 302.5191780179739,
+      "success": true,
+      "verified": true,
+      "prefill_tps": 1636.0,
+      "decode_tps": 559.0,
+      "prompt": "Scroll down the page"
+    },
+    {
+      "ms": 426.90173990558833,
+      "success": true,
+      "verified": true,
+      "prefill_tps": 1158.1,
+      "decode_tps": 472.2,
+      "prompt": "Click the login button with element id login"
+    },
+    {
+      "ms": 356.4156659413129,
+      "success": true,
+      "verified": true,
+      "prefill_tps": 1521.4,
+      "decode_tps": 592.9,
+      "prompt": "Type Enschede into the search field with element id search"
+    },
+    {
+      "ms": 319.13011299911886,
+      "success": true,
+      "verified": true,
+      "prefill_tps": 1149.6,
+      "decode_tps": 539.8,
+      "prompt": "Scroll down the page"
+    },
+    {
+      "ms": 354.0331278927624,
+      "success": true,
+      "verified": true,
+      "prefill_tps": 1583.2,
+      "decode_tps": 602.2,
+      "prompt": "Click the login button with element id login"
+    },
+    {
+      "ms": 347.8262060089037,
+      "success": true,
+      "verified": true,
+      "prefill_tps": 1472.5,
+      "decode_tps": 545.2,
+      "prompt": "Type Enschede into the search field with element id search"
+    },
+    {
+      "ms": 357.8337359940633,
+      "success": true,
+      "verified": true,
+      "prefill_tps": 1199.8,
+      "decode_tps": 439.1,
+      "prompt": "Scroll down the page"
+    },
+    {
+      "ms": 361.6660439874977,
+      "success": true,
+      "verified": true,
+      "prefill_tps": 1036.9,
+      "decode_tps": 578.6,
+      "prompt": "Click the login button with element id login"
+    },
+    {
+      "ms": 381.11998210661113,
+      "success": true,
+      "verified": true,
+      "prefill_tps": 918.7,
+      "decode_tps": 438.7,
+      "prompt": "Type Enschede into the search field with element id search"
+    },
+    {
+      "ms": 328.7408290198073,
+      "success": true,
+      "verified": true,
+      "prefill_tps": 1531.6,
+      "decode_tps": 532.0,
+      "prompt": "Scroll down the page"
+    },
+    {
+      "ms": 396.58845495432615,
+      "success": true,
+      "verified": true,
+      "prefill_tps": 1192.4,
+      "decode_tps": 587.8,
+      "prompt": "Click the login button with element id login"
+    },
+    {
+      "ms": 356.52776702772826,
+      "success": true,
+      "verified": true,
+      "prefill_tps": 1444.6,
+      "decode_tps": 589.1,
+      "prompt": "Type Enschede into the search field with element id search"
+    },
+    {
+      "ms": 343.4590750839561,
+      "success": true,
+      "verified": true,
+      "prefill_tps": 1177.3,
+      "decode_tps": 437.9,
+      "prompt": "Scroll down the page"
+    },
+    {
+      "ms": 418.6503839446232,
+      "success": true,
+      "verified": true,
+      "prefill_tps": 1189.2,
+      "decode_tps": 472.9,
+      "prompt": "Click the login button with element id login"
+    },
+    {
+      "ms": 367.5024010008201,
+      "success": true,
+      "verified": true,
+      "prefill_tps": 1301.0,
+      "decode_tps": 563.9,
+      "prompt": "Type Enschede into the search field with element id search"
+    },
+    {
+      "ms": 346.65339591447264,
+      "success": true,
+      "verified": true,
+      "prefill_tps": 976.3,
+      "decode_tps": 432.7,
+      "prompt": "Scroll down the page"
+    },
+    {
+      "ms": 433.7396059418097,
+      "success": true,
+      "verified": true,
+      "prefill_tps": 1135.9,
+      "decode_tps": 451.2,
+      "prompt": "Click the login button with element id login"
+    },
+    {
+      "ms": 354.4190810061991,
+      "success": true,
+      "verified": true,
+      "prefill_tps": 1153.9,
+      "decode_tps": 595.9,
+      "prompt": "Type Enschede into the search field with element id search"
+    },
+    {
+      "ms": 349.25216995179653,
+      "success": true,
+      "verified": true,
+      "prefill_tps": 1248.0,
+      "decode_tps": 440.0,
+      "prompt": "Scroll down the page"
+    },
+    {
+      "ms": 360.8670450048521,
+      "success": true,
+      "verified": true,
+      "prefill_tps": 1211.3,
+      "decode_tps": 576.7,
+      "prompt": "Click the login button with element id login"
+    },
+    {
+      "ms": 421.06924194376916,
+      "success": true,
+      "verified": true,
+      "prefill_tps": 1135.9,
+      "decode_tps": 462.0,
+      "prompt": "Type Enschede into the search field with element id search"
+    },
+    {
+      "ms": 326.33531792089343,
+      "success": true,
+      "verified": true,
+      "prefill_tps": 1125.6,
+      "decode_tps": 443.7,
+      "prompt": "Scroll down the page"
+    },
+    {
+      "ms": 406.59093495924026,
+      "success": true,
+      "verified": true,
+      "prefill_tps": 1126.1,
+      "decode_tps": 455.1,
+      "prompt": "Click the login button with element id login"
+    }
+  ]
+}
