@@ -14,6 +14,9 @@ def main():
   elif m=='notifications/initialized': continue
   elif m=='tools/list': reply(i,{'tools':[SCHEMA]})
   elif m=='tools/call':
-   a=q.get('params',{}).get('arguments',{}); out=c(a.get('goal',''),a.get('state',{}),a.get('tools',[])); reply(i,{'content':[{'type':'text','text':json.dumps(out)}]})
+   try:
+    a=q.get('params',{}).get('arguments',{}); out=c(a.get('goal',''),a.get('state',{}),a.get('tools',[])); reply(i,{'content':[{'type':'text','text':json.dumps(out)}]})
+   except Exception as e:
+    reply(i,{'content':[{'type':'text','text':json.dumps({'error':str(e),'verified':False})}],'isError':True})
   else: reply(i,{'error':f'unsupported method: {m}'})
 if __name__=='__main__': main()
