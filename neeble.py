@@ -14,6 +14,12 @@ class BrowserExecutor:
         pages = self.browser.contexts[0].pages
         page = pages[-1]
         name, args = action.get('name'), action.get('arguments', {})
+        if name in {'click_element', 'type_text'}:
+            target = '#' + args['element_id']
+            for candidate in reversed(pages):
+                if candidate.locator(target).count():
+                    page = candidate
+                    break
         if name == 'goto': page.goto(args['url'])
         elif name == 'back': page.go_back()
         elif name == 'forward': page.go_forward()
