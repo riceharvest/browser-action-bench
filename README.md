@@ -32,12 +32,13 @@ The mock backend only validates the harness. It is not a model benchmark.
 
 See `RUNTIME.md` for the intended single-runtime architecture: Needle attempts routine actions, validates them against browser state, and escalates only low-confidence or failed decisions to the larger model.
 
-For a larger model:
+For the larger-model baseline through OpenRouter:
 
 ```bash
+export OPENROUTER_API_KEY=...
 python -m babench run --backend openai \
-  --base-url http://127.0.0.1:8014/v1 \
-  --model YOUR_MODEL \
+  --base-url https://openrouter.ai/api/v1 \
+  --model deepseek/deepseek-v4.1-flash \
   --cases 100
 ```
 
