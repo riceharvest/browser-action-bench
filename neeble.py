@@ -1,7 +1,21 @@
 from __future__ import annotations
-import argparse, json, sys
+import argparse, json, os, sys
 import needle
+from playwright.sync_api import sync_playwright
 from babench.runtime import verify_action
+
+
+def execute_verified(action: dict, cdp_url: str) -> dict:
+    with sync_playwright() as pw:
+        browser = pw.chromium.connect_over_cdp(cdp_url)
+        page = browser.contexts[0].pages[-1]
+        name, args = action.get('name'), action.get('arguments', {})
+        if name == 'click_element': page.locator('#' + args['element_id']).click()
+        elif name == 'type_text': page.locator('#' + args['element_id']).fill(args['text'])
+        elif name == 'scroll': page.evaluate('window.scrollTo(0, document.body.scrollHeight)')
+        elif name == 'wait': page.wait_for_timeout(int(args.get('ms', 100)))
+        else: return {'verified': False, 'error': 'executor does not implement action'}
+        return {'verified': True, 'url': page.url, 'title': page.title()}
 
 
 def main() -> None:
@@ -38,6 +52,10 @@ def main() -> None:
             verdict = verify_action(action, state)
             result['legal_for_state'] = verdict.ok
             result['verification_reason'] = verdict.reason
+            cdp_url = os.environ.get('NEEBLE_CDP_URL')
+            if verdict.ok and cdp_url and candidate.get('_action'):
+                result['executor'] = execute_verified(action, cdp_url)
+                result['verified'] = result['executor'].get('verified', False)
         print(json.dumps(result), flush=True)
 
 if __name__ == '__main__': main()
