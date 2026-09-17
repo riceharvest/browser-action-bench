@@ -1,12 +1,12 @@
 """Minimal stdio MCP bridge exposing Neeble as the `neeble` tool."""
 from __future__ import annotations
-import json, sys
+import json, os, sys
 from neeble_tool import NeebleTool
 
 SCHEMA={'name':'neeble','description':'Fast verified browser action policy layer','inputSchema':{'type':'object','properties':{'goal':{'type':'string'},'state':{'type':'object'},'tools':{'type':'array'}},'required':['goal','state','tools']}}
 def reply(i,r): print(json.dumps({'jsonrpc':'2.0','id':i,'result':r}),flush=True)
 def main():
- c=NeebleTool()
+ c=NeebleTool(weights=os.environ.get('NEEBLE_WEIGHTS','models/needle3.cact'), cdp_url=os.environ.get('NEEBLE_CDP_URL'))
  for line in sys.stdin:
   if not line.strip(): continue
   q=json.loads(line); i=q.get('id'); m=q.get('method')
