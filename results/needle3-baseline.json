@@ -1,0 +1,1315 @@
+{
+  "backend": "needle3-python",
+  "cases": 100,
+  "successful_decisions": 100,
+  "latency_ms_mean": 140.5527391063515,
+  "latency_ms_p50": 137.55582395242527,
+  "latency_ms_min": 115.4406990390271,
+  "latency_ms_max": 190.02738303970546,
+  "actions_per_minute": 426.88602428871934,
+  "prefill_tps_median": 1439.0,
+  "decode_tps_median": 543.2,
+  "note": "Needle model decision loop with Python runtime and function tools; executor is a verification stub, not Chromium yet.",
+  "reports": [
+    {
+      "prompt": "Click the login button with element id login",
+      "elapsed_ms": 134.4986369367689,
+      "success": true,
+      "confidence": null,
+      "prefill_tps": 1669.6,
+      "decode_tps": 573.0,
+      "results": [
+        {
+          "verified": true
+        }
+      ]
+    },
+    {
+      "prompt": "Type Enschede into the search field with element id search",
+      "elapsed_ms": 125.35744102206081,
+      "success": true,
+      "confidence": null,
+      "prefill_tps": 1507.6,
+      "decode_tps": 561.7,
+      "results": [
+        {
+          "verified": true
+        }
+      ]
+    },
+    {
+      "prompt": "Scroll down the page",
+      "elapsed_ms": 131.67251297272742,
+      "success": true,
+      "confidence": null,
+      "prefill_tps": 1407.7,
+      "decode_tps": 553.6,
+      "results": [
+        {
+          "verified": true
+        }
+      ]
+    },
+    {
+      "prompt": "Wait for the results selector .results",
+      "elapsed_ms": 121.000473969616,
+      "success": true,
+      "confidence": null,
+      "prefill_tps": 1635.3,
+      "decode_tps": 582.1,
+      "results": [
+        {
+          "verified": true
+        }
+      ]
+    },
+    {
+      "prompt": "Click the login button with element id login",
+      "elapsed_ms": 141.11738896463066,
+      "success": true,
+      "confidence": null,
+      "prefill_tps": 1473.6,
+      "decode_tps": 555.9,
+      "results": [
+        {
+          "verified": true
+        }
+      ]
+    },
+    {
+      "prompt": "Type Enschede into the search field with element id search",
+      "elapsed_ms": 121.18576199281961,
+      "success": true,
+      "confidence": null,
+      "prefill_tps": 1582.0,
+      "decode_tps": 560.4,
+      "results": [
+        {
+          "verified": true
+        }
+      ]
+    },
+    {
+      "prompt": "Scroll down the page",
+      "elapsed_ms": 122.88420891854912,
+      "success": true,
+      "confidence": null,
+      "prefill_tps": 1685.1,
+      "decode_tps": 580.6,
+      "results": [
+        {
+          "verified": true
+        }
+      ]
+    },
+    {
+      "prompt": "Wait for the results selector .results",
+      "elapsed_ms": 156.37372201308608,
+      "success": true,
+      "confidence": null,
+      "prefill_tps": 1242.0,
+      "decode_tps": 456.4,
+      "results": [
+        {
+          "verified": true
+        }
+      ]
+    },
+    {
+      "prompt": "Click the login button with element id login",
+      "elapsed_ms": 166.54087393544614,
+      "success": true,
+      "confidence": null,
+      "prefill_tps": 1257.5,
+      "decode_tps": 449.3,
+      "results": [
+        {
+          "verified": true
+        }
+      ]
+    },
+    {
+      "prompt": "Type Enschede into the search field with element id search",
+      "elapsed_ms": 144.97809507884085,
+      "success": true,
+      "confidence": null,
+      "prefill_tps": 1191.8,
+      "decode_tps": 441.2,
+      "results": [
+        {
+          "verified": true
+        }
+      ]
+    },
+    {
+      "prompt": "Scroll down the page",
+      "elapsed_ms": 165.51159194204956,
+      "success": true,
+      "confidence": null,
+      "prefill_tps": 1325.8,
+      "decode_tps": 390.4,
+      "results": [
+        {
+          "verified": true
+        }
+      ]
+    },
+    {
+      "prompt": "Wait for the results selector .results",
+      "elapsed_ms": 157.77698496822268,
+      "success": true,
+      "confidence": null,
+      "prefill_tps": 1243.8,
+      "decode_tps": 436.1,
+      "results": [
+        {
+          "verified": true
+        }
+      ]
+    },
+    {
+      "prompt": "Click the login button with element id login",
+      "elapsed_ms": 136.28423807676882,
+      "success": true,
+      "confidence": null,
+      "prefill_tps": 1539.8,
+      "decode_tps": 557.9,
+      "results": [
+        {
+          "verified": true
+        }
+      ]
+    },
+    {
+      "prompt": "Type Enschede into the search field with element id search",
+      "elapsed_ms": 118.16542292945087,
+      "success": true,
+      "confidence": null,
+      "prefill_tps": 1621.9,
+      "decode_tps": 564.3,
+      "results": [
+        {
+          "verified": true
+        }
+      ]
+    },
+    {
+      "prompt": "Scroll down the page",
+      "elapsed_ms": 154.54063203651458,
+      "success": true,
+      "confidence": null,
+      "prefill_tps": 1304.7,
+      "decode_tps": 459.9,
+      "results": [
+        {
+          "verified": true
+        }
+      ]
+    },
+    {
+      "prompt": "Wait for the results selector .results",
+      "elapsed_ms": 142.66265893820673,
+      "success": true,
+      "confidence": null,
+      "prefill_tps": 1264.2,
+      "decode_tps": 456.0,
+      "results": [
+        {
+          "verified": true
+        }
+      ]
+    },
+    {
+      "prompt": "Click the login button with element id login",
+      "elapsed_ms": 154.4391509378329,
+      "success": true,
+      "confidence": null,
+      "prefill_tps": 1252.6,
+      "decode_tps": 461.8,
+      "results": [
+        {
+          "verified": true
+        }
+      ]
+    },
+    {
+      "prompt": "Type Enschede into the search field with element id search",
+      "elapsed_ms": 149.8030599905178,
+      "success": true,
+      "confidence": null,
+      "prefill_tps": 1211.1,
+      "decode_tps": 450.5,
+      "results": [
+        {
+          "verified": true
+        }
+      ]
+    },
+    {
+      "prompt": "Scroll down the page",
+      "elapsed_ms": 128.34887497592717,
+      "success": true,
+      "confidence": null,
+      "prefill_tps": 1560.5,
+      "decode_tps": 542.8,
+      "results": [
+        {
+          "verified": true
+        }
+      ]
+    },
+    {
+      "prompt": "Wait for the results selector .results",
+      "elapsed_ms": 123.97696904372424,
+      "success": true,
+      "confidence": null,
+      "prefill_tps": 1579.9,
+      "decode_tps": 575.5,
+      "results": [
+        {
+          "verified": true
+        }
+      ]
+    },
+    {
+      "prompt": "Click the login button with element id login",
+      "elapsed_ms": 129.49705007486045,
+      "success": true,
+      "confidence": null,
+      "prefill_tps": 1634.9,
+      "decode_tps": 581.9,
+      "results": [
+        {
+          "verified": true
+        }
+      ]
+    },
+    {
+      "prompt": "Type Enschede into the search field with element id search",
+      "elapsed_ms": 115.4406990390271,
+      "success": true,
+      "confidence": null,
+      "prefill_tps": 1666.9,
+      "decode_tps": 561.4,
+      "results": [
+        {
+          "verified": true
+        }
+      ]
+    },
+    {
+      "prompt": "Scroll down the page",
+      "elapsed_ms": 159.5399739453569,
+      "success": true,
+      "confidence": null,
+      "prefill_tps": 1242.8,
+      "decode_tps": 441.8,
+      "results": [
+        {
+          "verified": true
+        }
+      ]
+    },
+    {
+      "prompt": "Wait for the results selector .results",
+      "elapsed_ms": 125.73427800089121,
+      "success": true,
+      "confidence": null,
+      "prefill_tps": 1696.3,
+      "decode_tps": 579.7,
+      "results": [
+        {
+          "verified": true
+        }
+      ]
+    },
+    {
+      "prompt": "Click the login button with element id login",
+      "elapsed_ms": 170.08773109409958,
+      "success": true,
+      "confidence": null,
+      "prefill_tps": 1282.6,
+      "decode_tps": 450.5,
+      "results": [
+        {
+          "verified": true
+        }
+      ]
+    },
+    {
+      "prompt": "Type Enschede into the search field with element id search",
+      "elapsed_ms": 123.92649496905506,
+      "success": true,
+      "confidence": null,
+      "prefill_tps": 1462.4,
+      "decode_tps": 551.7,
+      "results": [
+        {
+          "verified": true
+        }
+      ]
+    },
+    {
+      "prompt": "Scroll down the page",
+      "elapsed_ms": 132.57554697338492,
+      "success": true,
+      "confidence": null,
+      "prefill_tps": 1356.9,
+      "decode_tps": 548.4,
+      "results": [
+        {
+          "verified": true
+        }
+      ]
+    },
+    {
+      "prompt": "Wait for the results selector .results",
+      "elapsed_ms": 159.65045103803277,
+      "success": true,
+      "confidence": null,
+      "prefill_tps": 1230.8,
+      "decode_tps": 445.0,
+      "results": [
+        {
+          "verified": true
+        }
+      ]
+    },
+    {
+      "prompt": "Click the login button with element id login",
+      "elapsed_ms": 168.2033829856664,
+      "success": true,
+      "confidence": null,
+      "prefill_tps": 1226.0,
+      "decode_tps": 447.2,
+      "results": [
+        {
+          "verified": true
+        }
+      ]
+    },
+    {
+      "prompt": "Type Enschede into the search field with element id search",
+      "elapsed_ms": 119.9669640045613,
+      "success": true,
+      "confidence": null,
+      "prefill_tps": 1653.5,
+      "decode_tps": 566.1,
+      "results": [
+        {
+          "verified": true
+        }
+      ]
+    },
+    {
+      "prompt": "Scroll down the page",
+      "elapsed_ms": 140.63052495475858,
+      "success": true,
+      "confidence": null,
+      "prefill_tps": 1590.6,
+      "decode_tps": 428.9,
+      "results": [
+        {
+          "verified": true
+        }
+      ]
+    },
+    {
+      "prompt": "Wait for the results selector .results",
+      "elapsed_ms": 147.66960602719337,
+      "success": true,
+      "confidence": null,
+      "prefill_tps": 1334.2,
+      "decode_tps": 564.8,
+      "results": [
+        {
+          "verified": true
+        }
+      ]
+    },
+    {
+      "prompt": "Click the login button with element id login",
+      "elapsed_ms": 150.07501002401114,
+      "success": true,
+      "confidence": null,
+      "prefill_tps": 1422.9,
+      "decode_tps": 579.6,
+      "results": [
+        {
+          "verified": true
+        }
+      ]
+    },
+    {
+      "prompt": "Type Enschede into the search field with element id search",
+      "elapsed_ms": 152.36764296423644,
+      "success": true,
+      "confidence": null,
+      "prefill_tps": 1262.7,
+      "decode_tps": 436.0,
+      "results": [
+        {
+          "verified": true
+        }
+      ]
+    },
+    {
+      "prompt": "Scroll down the page",
+      "elapsed_ms": 125.63090305775404,
+      "success": true,
+      "confidence": null,
+      "prefill_tps": 1585.1,
+      "decode_tps": 567.9,
+      "results": [
+        {
+          "verified": true
+        }
+      ]
+    },
+    {
+      "prompt": "Wait for the results selector .results",
+      "elapsed_ms": 160.40562908165157,
+      "success": true,
+      "confidence": null,
+      "prefill_tps": 1228.7,
+      "decode_tps": 449.7,
+      "results": [
+        {
+          "verified": true
+        }
+      ]
+    },
+    {
+      "prompt": "Click the login button with element id login",
+      "elapsed_ms": 135.20620402414352,
+      "success": true,
+      "confidence": null,
+      "prefill_tps": 1631.2,
+      "decode_tps": 567.0,
+      "results": [
+        {
+          "verified": true
+        }
+      ]
+    },
+    {
+      "prompt": "Type Enschede into the search field with element id search",
+      "elapsed_ms": 136.56889204867184,
+      "success": true,
+      "confidence": null,
+      "prefill_tps": 1469.5,
+      "decode_tps": 524.6,
+      "results": [
+        {
+          "verified": true
+        }
+      ]
+    },
+    {
+      "prompt": "Scroll down the page",
+      "elapsed_ms": 159.83306395355612,
+      "success": true,
+      "confidence": null,
+      "prefill_tps": 1244.8,
+      "decode_tps": 439.1,
+      "results": [
+        {
+          "verified": true
+        }
+      ]
+    },
+    {
+      "prompt": "Wait for the results selector .results",
+      "elapsed_ms": 158.01041398663074,
+      "success": true,
+      "confidence": null,
+      "prefill_tps": 1241.7,
+      "decode_tps": 450.4,
+      "results": [
+        {
+          "verified": true
+        }
+      ]
+    },
+    {
+      "prompt": "Click the login button with element id login",
+      "elapsed_ms": 151.63122094236314,
+      "success": true,
+      "confidence": null,
+      "prefill_tps": 1625.2,
+      "decode_tps": 559.3,
+      "results": [
+        {
+          "verified": true
+        }
+      ]
+    },
+    {
+      "prompt": "Type Enschede into the search field with element id search",
+      "elapsed_ms": 151.79597993846983,
+      "success": true,
+      "confidence": null,
+      "prefill_tps": 1250.0,
+      "decode_tps": 444.8,
+      "results": [
+        {
+          "verified": true
+        }
+      ]
+    },
+    {
+      "prompt": "Scroll down the page",
+      "elapsed_ms": 129.42659691907465,
+      "success": true,
+      "confidence": null,
+      "prefill_tps": 1328.5,
+      "decode_tps": 539.8,
+      "results": [
+        {
+          "verified": true
+        }
+      ]
+    },
+    {
+      "prompt": "Wait for the results selector .results",
+      "elapsed_ms": 127.46367393992841,
+      "success": true,
+      "confidence": null,
+      "prefill_tps": 1522.5,
+      "decode_tps": 561.9,
+      "results": [
+        {
+          "verified": true
+        }
+      ]
+    },
+    {
+      "prompt": "Click the login button with element id login",
+      "elapsed_ms": 136.79410493932664,
+      "success": true,
+      "confidence": null,
+      "prefill_tps": 1348.7,
+      "decode_tps": 540.5,
+      "results": [
+        {
+          "verified": true
+        }
+      ]
+    },
+    {
+      "prompt": "Type Enschede into the search field with element id search",
+      "elapsed_ms": 117.48413403984159,
+      "success": true,
+      "confidence": null,
+      "prefill_tps": 1670.3,
+      "decode_tps": 566.8,
+      "results": [
+        {
+          "verified": true
+        }
+      ]
+    },
+    {
+      "prompt": "Scroll down the page",
+      "elapsed_ms": 137.70763901993632,
+      "success": true,
+      "confidence": null,
+      "prefill_tps": 1593.4,
+      "decode_tps": 570.6,
+      "results": [
+        {
+          "verified": true
+        }
+      ]
+    },
+    {
+      "prompt": "Wait for the results selector .results",
+      "elapsed_ms": 154.47907603811473,
+      "success": true,
+      "confidence": null,
+      "prefill_tps": 1270.2,
+      "decode_tps": 455.8,
+      "results": [
+        {
+          "verified": true
+        }
+      ]
+    },
+    {
+      "prompt": "Click the login button with element id login",
+      "elapsed_ms": 147.61953195556998,
+      "success": true,
+      "confidence": null,
+      "prefill_tps": 1097.1,
+      "decode_tps": 492.5,
+      "results": [
+        {
+          "verified": true
+        }
+      ]
+    },
+    {
+      "prompt": "Type Enschede into the search field with element id search",
+      "elapsed_ms": 139.9473629426211,
+      "success": true,
+      "confidence": null,
+      "prefill_tps": 1635.4,
+      "decode_tps": 543.6,
+      "results": [
+        {
+          "verified": true
+        }
+      ]
+    },
+    {
+      "prompt": "Scroll down the page",
+      "elapsed_ms": 128.17951699253172,
+      "success": true,
+      "confidence": null,
+      "prefill_tps": 1543.9,
+      "decode_tps": 537.1,
+      "results": [
+        {
+          "verified": true
+        }
+      ]
+    },
+    {
+      "prompt": "Wait for the results selector .results",
+      "elapsed_ms": 131.12181902397424,
+      "success": true,
+      "confidence": null,
+      "prefill_tps": 1658.6,
+      "decode_tps": 565.0,
+      "results": [
+        {
+          "verified": true
+        }
+      ]
+    },
+    {
+      "prompt": "Click the login button with element id login",
+      "elapsed_ms": 130.70651004090905,
+      "success": true,
+      "confidence": null,
+      "prefill_tps": 1621.1,
+      "decode_tps": 571.1,
+      "results": [
+        {
+          "verified": true
+        }
+      ]
+    },
+    {
+      "prompt": "Type Enschede into the search field with element id search",
+      "elapsed_ms": 123.0797260068357,
+      "success": true,
+      "confidence": null,
+      "prefill_tps": 1455.1,
+      "decode_tps": 545.4,
+      "results": [
+        {
+          "verified": true
+        }
+      ]
+    },
+    {
+      "prompt": "Scroll down the page",
+      "elapsed_ms": 128.8771660765633,
+      "success": true,
+      "confidence": null,
+      "prefill_tps": 1611.9,
+      "decode_tps": 546.1,
+      "results": [
+        {
+          "verified": true
+        }
+      ]
+    },
+    {
+      "prompt": "Wait for the results selector .results",
+      "elapsed_ms": 124.19172201771289,
+      "success": true,
+      "confidence": null,
+      "prefill_tps": 1603.3,
+      "decode_tps": 577.2,
+      "results": [
+        {
+          "verified": true
+        }
+      ]
+    },
+    {
+      "prompt": "Click the login button with element id login",
+      "elapsed_ms": 140.12119895778596,
+      "success": true,
+      "confidence": null,
+      "prefill_tps": 1341.4,
+      "decode_tps": 519.4,
+      "results": [
+        {
+          "verified": true
+        }
+      ]
+    },
+    {
+      "prompt": "Type Enschede into the search field with element id search",
+      "elapsed_ms": 137.47605390381068,
+      "success": true,
+      "confidence": null,
+      "prefill_tps": 1460.0,
+      "decode_tps": 549.4,
+      "results": [
+        {
+          "verified": true
+        }
+      ]
+    },
+    {
+      "prompt": "Scroll down the page",
+      "elapsed_ms": 124.69011801294982,
+      "success": true,
+      "confidence": null,
+      "prefill_tps": 1527.9,
+      "decode_tps": 560.0,
+      "results": [
+        {
+          "verified": true
+        }
+      ]
+    },
+    {
+      "prompt": "Wait for the results selector .results",
+      "elapsed_ms": 129.65896306559443,
+      "success": true,
+      "confidence": null,
+      "prefill_tps": 1275.9,
+      "decode_tps": 551.2,
+      "results": [
+        {
+          "verified": true
+        }
+      ]
+    },
+    {
+      "prompt": "Click the login button with element id login",
+      "elapsed_ms": 133.2856999943033,
+      "success": true,
+      "confidence": null,
+      "prefill_tps": 1460.1,
+      "decode_tps": 575.6,
+      "results": [
+        {
+          "verified": true
+        }
+      ]
+    },
+    {
+      "prompt": "Type Enschede into the search field with element id search",
+      "elapsed_ms": 119.12530404515564,
+      "success": true,
+      "confidence": null,
+      "prefill_tps": 1545.5,
+      "decode_tps": 550.0,
+      "results": [
+        {
+          "verified": true
+        }
+      ]
+    },
+    {
+      "prompt": "Scroll down the page",
+      "elapsed_ms": 126.77014200016856,
+      "success": true,
+      "confidence": null,
+      "prefill_tps": 1565.4,
+      "decode_tps": 560.6,
+      "results": [
+        {
+          "verified": true
+        }
+      ]
+    },
+    {
+      "prompt": "Wait for the results selector .results",
+      "elapsed_ms": 148.2500049751252,
+      "success": true,
+      "confidence": null,
+      "prefill_tps": 1617.0,
+      "decode_tps": 566.8,
+      "results": [
+        {
+          "verified": true
+        }
+      ]
+    },
+    {
+      "prompt": "Click the login button with element id login",
+      "elapsed_ms": 131.22480199672282,
+      "success": true,
+      "confidence": null,
+      "prefill_tps": 1589.8,
+      "decode_tps": 569.6,
+      "results": [
+        {
+          "verified": true
+        }
+      ]
+    },
+    {
+      "prompt": "Type Enschede into the search field with element id search",
+      "elapsed_ms": 152.606010902673,
+      "success": true,
+      "confidence": null,
+      "prefill_tps": 1238.1,
+      "decode_tps": 438.7,
+      "results": [
+        {
+          "verified": true
+        }
+      ]
+    },
+    {
+      "prompt": "Scroll down the page",
+      "elapsed_ms": 148.01274903584272,
+      "success": true,
+      "confidence": null,
+      "prefill_tps": 1269.4,
+      "decode_tps": 518.5,
+      "results": [
+        {
+          "verified": true
+        }
+      ]
+    },
+    {
+      "prompt": "Wait for the results selector .results",
+      "elapsed_ms": 155.31744004692882,
+      "success": true,
+      "confidence": null,
+      "prefill_tps": 1269.3,
+      "decode_tps": 459.0,
+      "results": [
+        {
+          "verified": true
+        }
+      ]
+    },
+    {
+      "prompt": "Click the login button with element id login",
+      "elapsed_ms": 127.6921930257231,
+      "success": true,
+      "confidence": null,
+      "prefill_tps": 1562.4,
+      "decode_tps": 587.5,
+      "results": [
+        {
+          "verified": true
+        }
+      ]
+    },
+    {
+      "prompt": "Type Enschede into the search field with element id search",
+      "elapsed_ms": 140.60577901545912,
+      "success": true,
+      "confidence": null,
+      "prefill_tps": 1125.8,
+      "decode_tps": 449.1,
+      "results": [
+        {
+          "verified": true
+        }
+      ]
+    },
+    {
+      "prompt": "Scroll down the page",
+      "elapsed_ms": 137.62970292009413,
+      "success": true,
+      "confidence": null,
+      "prefill_tps": 1246.9,
+      "decode_tps": 462.5,
+      "results": [
+        {
+          "verified": true
+        }
+      ]
+    },
+    {
+      "prompt": "Wait for the results selector .results",
+      "elapsed_ms": 123.26389201916754,
+      "success": true,
+      "confidence": null,
+      "prefill_tps": 1503.4,
+      "decode_tps": 564.5,
+      "results": [
+        {
+          "verified": true
+        }
+      ]
+    },
+    {
+      "prompt": "Click the login button with element id login",
+      "elapsed_ms": 137.4819449847564,
+      "success": true,
+      "confidence": null,
+      "prefill_tps": 1606.5,
+      "decode_tps": 541.5,
+      "results": [
+        {
+          "verified": true
+        }
+      ]
+    },
+    {
+      "prompt": "Type Enschede into the search field with element id search",
+      "elapsed_ms": 150.31784598249942,
+      "success": true,
+      "confidence": null,
+      "prefill_tps": 1266.3,
+      "decode_tps": 448.6,
+      "results": [
+        {
+          "verified": true
+        }
+      ]
+    },
+    {
+      "prompt": "Scroll down the page",
+      "elapsed_ms": 152.30487496592104,
+      "success": true,
+      "confidence": null,
+      "prefill_tps": 1272.1,
+      "decode_tps": 468.5,
+      "results": [
+        {
+          "verified": true
+        }
+      ]
+    },
+    {
+      "prompt": "Wait for the results selector .results",
+      "elapsed_ms": 156.59583802334964,
+      "success": true,
+      "confidence": null,
+      "prefill_tps": 1229.3,
+      "decode_tps": 454.7,
+      "results": [
+        {
+          "verified": true
+        }
+      ]
+    },
+    {
+      "prompt": "Click the login button with element id login",
+      "elapsed_ms": 132.7492530690506,
+      "success": true,
+      "confidence": null,
+      "prefill_tps": 1635.6,
+      "decode_tps": 583.7,
+      "results": [
+        {
+          "verified": true
+        }
+      ]
+    },
+    {
+      "prompt": "Type Enschede into the search field with element id search",
+      "elapsed_ms": 120.38058997131884,
+      "success": true,
+      "confidence": null,
+      "prefill_tps": 1602.2,
+      "decode_tps": 559.8,
+      "results": [
+        {
+          "verified": true
+        }
+      ]
+    },
+    {
+      "prompt": "Scroll down the page",
+      "elapsed_ms": 127.55469500552863,
+      "success": true,
+      "confidence": null,
+      "prefill_tps": 1616.7,
+      "decode_tps": 561.0,
+      "results": [
+        {
+          "verified": true
+        }
+      ]
+    },
+    {
+      "prompt": "Wait for the results selector .results",
+      "elapsed_ms": 123.31020797137171,
+      "success": true,
+      "confidence": null,
+      "prefill_tps": 1495.0,
+      "decode_tps": 590.0,
+      "results": [
+        {
+          "verified": true
+        }
+      ]
+    },
+    {
+      "prompt": "Click the login button with element id login",
+      "elapsed_ms": 136.35202508885413,
+      "success": true,
+      "confidence": null,
+      "prefill_tps": 1585.4,
+      "decode_tps": 564.7,
+      "results": [
+        {
+          "verified": true
+        }
+      ]
+    },
+    {
+      "prompt": "Type Enschede into the search field with element id search",
+      "elapsed_ms": 138.47056101076305,
+      "success": true,
+      "confidence": null,
+      "prefill_tps": 1265.7,
+      "decode_tps": 482.0,
+      "results": [
+        {
+          "verified": true
+        }
+      ]
+    },
+    {
+      "prompt": "Scroll down the page",
+      "elapsed_ms": 161.00520396139473,
+      "success": true,
+      "confidence": null,
+      "prefill_tps": 1199.1,
+      "decode_tps": 440.0,
+      "results": [
+        {
+          "verified": true
+        }
+      ]
+    },
+    {
+      "prompt": "Wait for the results selector .results",
+      "elapsed_ms": 165.64989101607352,
+      "success": true,
+      "confidence": null,
+      "prefill_tps": 1171.9,
+      "decode_tps": 431.6,
+      "results": [
+        {
+          "verified": true
+        }
+      ]
+    },
+    {
+      "prompt": "Click the login button with element id login",
+      "elapsed_ms": 146.20215096510947,
+      "success": true,
+      "confidence": null,
+      "prefill_tps": 1335.3,
+      "decode_tps": 512.5,
+      "results": [
+        {
+          "verified": true
+        }
+      ]
+    },
+    {
+      "prompt": "Type Enschede into the search field with element id search",
+      "elapsed_ms": 135.7475210679695,
+      "success": true,
+      "confidence": null,
+      "prefill_tps": 1318.4,
+      "decode_tps": 515.1,
+      "results": [
+        {
+          "verified": true
+        }
+      ]
+    },
+    {
+      "prompt": "Scroll down the page",
+      "elapsed_ms": 160.12996097560972,
+      "success": true,
+      "confidence": null,
+      "prefill_tps": 1275.2,
+      "decode_tps": 441.4,
+      "results": [
+        {
+          "verified": true
+        }
+      ]
+    },
+    {
+      "prompt": "Wait for the results selector .results",
+      "elapsed_ms": 129.54256497323513,
+      "success": true,
+      "confidence": null,
+      "prefill_tps": 1619.6,
+      "decode_tps": 545.2,
+      "results": [
+        {
+          "verified": true
+        }
+      ]
+    },
+    {
+      "prompt": "Click the login button with element id login",
+      "elapsed_ms": 190.02738303970546,
+      "success": true,
+      "confidence": null,
+      "prefill_tps": 909.1,
+      "decode_tps": 443.2,
+      "results": [
+        {
+          "verified": true
+        }
+      ]
+    },
+    {
+      "prompt": "Type Enschede into the search field with element id search",
+      "elapsed_ms": 150.4405359737575,
+      "success": true,
+      "confidence": null,
+      "prefill_tps": 1258.6,
+      "decode_tps": 438.7,
+      "results": [
+        {
+          "verified": true
+        }
+      ]
+    },
+    {
+      "prompt": "Scroll down the page",
+      "elapsed_ms": 160.37690499797463,
+      "success": true,
+      "confidence": null,
+      "prefill_tps": 1183.8,
+      "decode_tps": 441.5,
+      "results": [
+        {
+          "verified": true
+        }
+      ]
+    },
+    {
+      "prompt": "Wait for the results selector .results",
+      "elapsed_ms": 128.131516976282,
+      "success": true,
+      "confidence": null,
+      "prefill_tps": 1625.0,
+      "decode_tps": 565.4,
+      "results": [
+        {
+          "verified": true
+        }
+      ]
+    },
+    {
+      "prompt": "Click the login button with element id login",
+      "elapsed_ms": 133.2298560300842,
+      "success": true,
+      "confidence": null,
+      "prefill_tps": 1623.0,
+      "decode_tps": 567.3,
+      "results": [
+        {
+          "verified": true
+        }
+      ]
+    },
+    {
+      "prompt": "Type Enschede into the search field with element id search",
+      "elapsed_ms": 150.2068379195407,
+      "success": true,
+      "confidence": null,
+      "prefill_tps": 1230.5,
+      "decode_tps": 442.8,
+      "results": [
+        {
+          "verified": true
+        }
+      ]
+    },
+    {
+      "prompt": "Scroll down the page",
+      "elapsed_ms": 156.38805902563035,
+      "success": true,
+      "confidence": null,
+      "prefill_tps": 1260.6,
+      "decode_tps": 450.0,
+      "results": [
+        {
+          "verified": true
+        }
+      ]
+    },
+    {
+      "prompt": "Wait for the results selector .results",
+      "elapsed_ms": 129.33316198177636,
+      "success": true,
+      "confidence": null,
+      "prefill_tps": 1505.0,
+      "decode_tps": 552.5,
+      "results": [
+        {
+          "verified": true
+        }
+      ]
+    },
+    {
+      "prompt": "Click the login button with element id login",
+      "elapsed_ms": 165.07516300771385,
+      "success": true,
+      "confidence": null,
+      "prefill_tps": 1227.4,
+      "decode_tps": 450.8,
+      "results": [
+        {
+          "verified": true
+        }
+      ]
+    },
+    {
+      "prompt": "Type Enschede into the search field with element id search",
+      "elapsed_ms": 120.96305296290666,
+      "success": true,
+      "confidence": null,
+      "prefill_tps": 1656.7,
+      "decode_tps": 583.4,
+      "results": [
+        {
+          "verified": true
+        }
+      ]
+    },
+    {
+      "prompt": "Scroll down the page",
+      "elapsed_ms": 152.77096000500023,
+      "success": true,
+      "confidence": null,
+      "prefill_tps": 1280.1,
+      "decode_tps": 460.9,
+      "results": [
+        {
+          "verified": true
+        }
+      ]
+    },
+    {
+      "prompt": "Wait for the results selector .results",
+      "elapsed_ms": 140.16035303939134,
+      "success": true,
+      "confidence": null,
+      "prefill_tps": 1284.3,
+      "decode_tps": 456.9,
+      "results": [
+        {
+          "verified": true
+        }
+      ]
+    }
+  ]
+}
