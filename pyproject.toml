@@ -1,0 +1,9 @@
+[project]
+name = "browser-action-bench"
+version = "0.1.0"
+description = "Measure browser automation actions per minute across tool-calling models"
+requires-python = ">=3.10"
+dependencies = []
+
+[project.scripts]
+babench = "babench.cli:main"

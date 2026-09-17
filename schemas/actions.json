@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "BrowserAction",
+  "type": "object",
+  "required": ["name", "arguments"],
+  "properties": {
+    "name": {"type": "string", "enum": ["goto", "back", "forward", "reload", "new_tab", "close_tab", "snapshot", "screenshot", "get_url", "get_title", "get_text", "find", "click", "double_click", "hover", "drag", "scroll", "scroll_into_view", "type", "press", "key_down", "key_up", "clear", "paste", "select_option", "check", "uncheck", "upload_file", "submit", "switch_tab", "new_window", "close_window", "wait", "wait_for_selector", "wait_for_navigation", "wait_for_network_idle", "cookies", "local_storage", "set_cookie", "retry", "refresh_snapshot", "escalate"]},
+    "arguments": {"type": "object", "additionalProperties": true}
+  },
+  "additionalProperties": false
+}
