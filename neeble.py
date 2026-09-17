@@ -5,10 +5,14 @@ from playwright.sync_api import sync_playwright
 from babench.runtime import verify_action
 
 
-def execute_verified(action: dict, cdp_url: str) -> dict:
-    with sync_playwright() as pw:
-        browser = pw.chromium.connect_over_cdp(cdp_url)
-        page = browser.contexts[0].pages[-1]
+class BrowserExecutor:
+    def __init__(self, cdp_url: str):
+        self.pw = sync_playwright().start()
+        self.browser = self.pw.chromium.connect_over_cdp(cdp_url)
+
+    def execute(self, action: dict) -> dict:
+        pages = self.browser.contexts[0].pages
+        page = pages[-1]
         name, args = action.get('name'), action.get('arguments', {})
         if name == 'goto': page.goto(args['url'])
         elif name == 'back': page.go_back()
@@ -19,7 +23,9 @@ def execute_verified(action: dict, cdp_url: str) -> dict:
         elif name == 'scroll': page.evaluate('window.scrollTo(0, document.body.scrollHeight)')
         elif name == 'wait': page.wait_for_timeout(int(args.get('ms', 100)))
         else: return {'verified': False, 'error': 'executor does not implement action'}
-        return {'verified': True, 'url': page.url, 'title': page.title()}
+        return {'verified': True, 'url': page.url, 'title': page.title(), 'pages': len(pages)}
+
+    def close(self): self.pw.stop()
 
 
 def main() -> None:
@@ -28,6 +34,7 @@ def main() -> None:
     p.add_argument('--max-new-tokens', type=int, default=128)
     args = p.parse_args()
     agent_cache = {}
+    executor = BrowserExecutor(os.environ['NEEBLE_CDP_URL']) if os.environ.get('NEEBLE_CDP_URL') else None
     for line in sys.stdin:
         if not line.strip(): continue
         req = json.loads(line)
@@ -69,8 +76,8 @@ def main() -> None:
             result['legal_for_state'] = verdict.ok
             result['verification_reason'] = verdict.reason
             cdp_url = os.environ.get('NEEBLE_CDP_URL')
-            if verdict.ok and cdp_url and candidate.get('_action'):
-                result['executor'] = execute_verified(action, cdp_url)
+            if verdict.ok and executor is not None and candidate.get('_action'):
+                result['executor'] = executor.execute(action)
                 result['verified'] = result['executor'].get('verified', False)
         print(json.dumps(result), flush=True)
 
