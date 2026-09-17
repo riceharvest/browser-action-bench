@@ -33,6 +33,11 @@ class BrowserExecutor:
         elements = page.locator('button, input, textarea, select, a, [role]').evaluate_all("els => els.slice(0, 100).map((e,i) => ({id:e.id || 'el-'+i, role:e.getAttribute('role') || e.tagName.toLowerCase(), text:(e.innerText || e.getAttribute('aria-label') || '').slice(0,160), visible:!!(e.offsetWidth || e.offsetHeight)}))")
         return {'verified': True, 'url': page.url, 'title': page.title(), 'pages': len(pages), 'state': {'url': page.url, 'elements': elements}}
 
+    def snapshot(self) -> dict:
+        page = self.browser.contexts[0].pages[-1]
+        elements = page.locator('button, input, textarea, select, a, [role]').evaluate_all("els => els.slice(0, 100).map((e,i) => ({id:e.id || 'el-'+i, role:e.getAttribute('role') || e.tagName.toLowerCase(), text:(e.innerText || e.getAttribute('aria-label') || '').slice(0,160), visible:!!(e.offsetWidth || e.offsetHeight)}))")
+        return {'url': page.url, 'title': page.title(), 'elements': elements}
+
     def close(self): self.pw.stop()
 
 
@@ -76,7 +81,7 @@ def main() -> None:
         result = agent.run(req.get('goal', ''), max_new_tokens=args.max_new_tokens)
         result['verified'] = False
         result['needs_executor_verification'] = True
-        state = req.get('state')
+        state = req.get('state') or (executor.snapshot() if executor is not None else None)
         if state and result.get('results'):
             candidate = result['results'][0]
             action = {'name': candidate.get('_action'), 'arguments': candidate.get('arguments', {})}
