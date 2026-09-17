@@ -20,10 +20,16 @@ The initial taxonomy covers:
 
 The action map is deliberately fine-grained: observation, pointer, keyboard, form, synchronization, browser data, and recovery are separate decisions. This lets us measure which operations Needle can safely own instead of hiding failures inside a generic `click` or `interact` action.
 
-See `RUNTIME.md` for the intended single-runtime architecture: Needle attempts routine actions, validates them against browser state, and escalates only low-confidence or failed decisions to the larger model.
-
+See `PROTOCOL.md` for the agent-facing JSONL CLI contract.
 
 ```bash
+pip install -e '.[needle]'
+python -m playwright install chromium
+export NEEBLE_CDP_URL=http://127.0.0.1:9222
+neeble --weights models/needle3.cact
+```
+
+
 python -m babench --help
 python -m babench run --backend mock --cases 100
 ```
