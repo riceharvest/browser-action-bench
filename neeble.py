@@ -10,7 +10,11 @@ def execute_verified(action: dict, cdp_url: str) -> dict:
         browser = pw.chromium.connect_over_cdp(cdp_url)
         page = browser.contexts[0].pages[-1]
         name, args = action.get('name'), action.get('arguments', {})
-        if name == 'click_element': page.locator('#' + args['element_id']).click()
+        if name == 'goto': page.goto(args['url'])
+        elif name == 'back': page.go_back()
+        elif name == 'forward': page.go_forward()
+        elif name == 'reload': page.reload()
+        elif name == 'click_element': page.locator('#' + args['element_id']).click()
         elif name == 'type_text': page.locator('#' + args['element_id']).fill(args['text'])
         elif name == 'scroll': page.evaluate('window.scrollTo(0, document.body.scrollHeight)')
         elif name == 'wait': page.wait_for_timeout(int(args.get('ms', 100)))
@@ -23,6 +27,7 @@ def main() -> None:
     p.add_argument('--weights', default='models/needle3.cact')
     p.add_argument('--max-new-tokens', type=int, default=128)
     args = p.parse_args()
+    agent_cache = {}
     for line in sys.stdin:
         if not line.strip(): continue
         req = json.loads(line)
@@ -33,6 +38,14 @@ def main() -> None:
             params = spec.get('parameters', {})
             if name == 'click_element':
                 def tool(element_id: str): return {'_action': 'click_element', 'arguments': {'element_id': element_id}, 'verified': False}
+            elif name == 'goto':
+                def tool(url: str): return {'_action': 'goto', 'arguments': {'url': url}, 'verified': False}
+            elif name == 'back':
+                def tool(): return {'_action': 'back', 'arguments': {}, 'verified': False}
+            elif name == 'forward':
+                def tool(): return {'_action': 'forward', 'arguments': {}, 'verified': False}
+            elif name == 'reload':
+                def tool(): return {'_action': 'reload', 'arguments': {}, 'verified': False}
             elif name == 'type_text':
                 def tool(element_id: str, text: str): return {'_action': 'type_text', 'arguments': {'element_id': element_id, 'text': text}, 'verified': False}
             elif name == 'scroll':
@@ -41,7 +54,10 @@ def main() -> None:
                 def tool(): return {'_action': name, 'arguments': {}, 'verified': False}
             tool.__name__, tool.__doc__ = name, desc
             tools.append(needle.tool(tool))
-        agent = needle.Needle(tools=tools, weights=args.weights)
+        tool_key = tuple(spec['name'] for spec in req.get('tools', []))
+        if tool_key not in agent_cache:
+            agent_cache[tool_key] = needle.Needle(tools=tools, weights=args.weights)
+        agent = agent_cache[tool_key]
         result = agent.run(req.get('goal', ''), max_new_tokens=args.max_new_tokens)
         result['verified'] = False
         result['needs_executor_verification'] = True

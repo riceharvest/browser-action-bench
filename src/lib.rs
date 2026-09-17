@@ -22,6 +22,10 @@ pub enum ValidationError {
     LowConfidence,
 }
 const ROUTINE: &[&str] = &[
+    "goto",
+    "back",
+    "forward",
+    "reload",
     "click_element",
     "type",
     "scroll",
@@ -49,7 +53,6 @@ const RISKY: &[&str] = &[
     "download",
     "close_tab",
     "close_window",
-    "goto",
 ];
 pub fn decide(
     action: &BrowserAction,
