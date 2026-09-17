@@ -22,5 +22,16 @@ class NeebleTool:
         if not line: raise RuntimeError('neeble returned no response')
         return json.loads(line)
 
+    def run_trajectory(self, steps: list[dict[str, Any]]) -> list[dict[str, Any]]:
+        """Run a complete multi-page trajectory over one persistent process."""
+        results = []
+        state: dict[str, Any] = {}
+        for step in steps:
+            result = self(step['goal'], step.get('state', state), step['tools'])
+            results.append(result)
+            if result.get('executor', {}).get('state'):
+                state = result['executor']['state']
+        return results
+
     def close(self) -> None:
         if self.proc.poll() is None: self.proc.terminate(); self.proc.wait(timeout=5)
