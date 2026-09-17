@@ -8,6 +8,9 @@ dependencies = []
 [project.optional-dependencies]
 needle = ["cactus-needle>=3.0.0", "playwright>=1.50"]
 
+[tool.setuptools]
+py-modules = ["neeble", "neeble_tool"]
+packages = ["babench", "integrations"]
 [project.scripts]
 babench = "babench.cli:main"
 neeble = "neeble:main"
