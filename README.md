@@ -55,6 +55,16 @@ pip install cactus-needle
 python -m babench run --backend needle --layers 8 --cases 100
 ```
 
+```bash
+hermes mcp add neeble \
+  --command "$(command -v neeble-mcp)" \
+  --env NEEBLE_WEIGHTS=/absolute/path/to/models/needle3.cact
+hermes mcp test neeble
+# Start a new session, then include the neeble MCP toolset.
+hermes chat -q 'Use neeble for routine browser actions.' --toolsets browser,neeble
+```
+
+The MCP server keeps the model and browser connection alive across the complete navigation trajectory. `NEEBLE_WEIGHTS` must be absolute because Hermes may launch the stdio server from a different working directory.
 Results are JSONL plus a summary JSON. Never compare runs unless the fixture set, action set, prompt, and concurrency are identical.
 
 ## What this answers
