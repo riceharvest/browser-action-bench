@@ -7,14 +7,31 @@ import time
 from pathlib import Path
 
 ACTIONS = [
-    "goto", "back", "forward", "reload", "new_tab", "close_tab",
-    "snapshot", "screenshot", "get_url", "get_title", "get_text", "find",
-    "click", "double_click", "hover", "drag", "scroll", "scroll_into_view",
-    "type", "press", "key_down", "key_up", "clear", "paste",
-    "select_option", "check", "uncheck", "upload_file", "submit",
-    "switch_tab", "new_window", "close_window", "wait", "wait_for_selector",
-    "wait_for_navigation", "wait_for_network_idle", "cookies", "local_storage",
-    "set_cookie", "retry", "refresh_snapshot", "escalate",
+    # navigation
+    "goto", "back", "forward", "reload", "stop_loading", "new_tab", "close_tab",
+    # observation
+    "snapshot", "screenshot", "screenshot_region", "get_url", "get_title",
+    "get_text", "get_attribute", "get_value", "find", "find_all", "inspect",
+    # pointer and viewport
+    "click_element", "click_coordinates", "double_click", "right_click", "middle_click",
+    "hover", "move_mouse", "mouse_down", "mouse_up", "drag", "scroll",
+    "scroll_into_view", "scroll_to_top", "scroll_to_bottom", "zoom",
+    # keyboard and clipboard
+    "type", "type_key_sequence", "press", "key_down", "key_up", "clear",
+    "copy", "cut", "paste", "select_all",
+    # forms
+    "focus", "blur", "select_option", "select_options", "check", "uncheck",
+    "toggle", "set_range", "upload_file", "submit",
+    # tabs, windows, frames
+    "switch_tab", "new_window", "close_window", "switch_frame", "open_popup",
+    # synchronization
+    "wait", "wait_for_selector", "wait_for_text", "wait_for_url",
+    "wait_for_navigation", "wait_for_network_idle", "wait_for_download",
+    # browser data and scripts
+    "cookies", "set_cookie", "clear_cookies", "local_storage", "session_storage",
+    "set_storage", "clear_storage", "execute_script", "download",
+    # recovery and delegation
+    "retry", "refresh_snapshot", "backtrack", "escalate",
 ]
 
 

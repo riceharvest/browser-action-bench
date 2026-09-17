@@ -18,9 +18,10 @@ The initial taxonomy covers:
 - browser data: `cookies`, `local_storage`, `set_cookie`
 - recovery: `retry`, `refresh_snapshot`, `escalate`
 
-Each action has a strict JSON schema in `schemas/actions.json`.
+The action map is deliberately fine-grained: observation, pointer, keyboard, form, synchronization, browser data, and recovery are separate decisions. This lets us measure which operations Needle can safely own instead of hiding failures inside a generic `click` or `interact` action.
 
-## Run the fixture benchmark
+See `RUNTIME.md` for the intended single-runtime architecture: Needle attempts routine actions, validates them against browser state, and escalates only low-confidence or failed decisions to the larger model.
+
 
 ```bash
 python -m babench --help
