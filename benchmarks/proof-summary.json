@@ -1,0 +1,35 @@
+{
+  "benchmark": "hermes-neeble-four-action-fixture-v1",
+  "evidence_class": "reviewed_local_aggregate",
+  "fixture": {
+    "actions": ["goto", "click_element", "click_element", "click_element"],
+    "verified_actions_per_run": 4,
+    "postcondition": {"title": "done"},
+    "same_model_browser_executor_and_cdp_lifetime": true
+  },
+  "neeble": {
+    "tool_calls_per_run": 1,
+    "valid_runs": 8,
+    "p50_wall_ms": 18875.08940603584
+  },
+  "one_action_mcp_baseline": {
+    "tool_calls_per_run": 4,
+    "valid_runs": 9,
+    "p50_wall_ms": 40957.087974995375,
+    "note": "Repo-local matched baseline, not Hermes built-in browser_exec."
+  },
+  "speedup_ratio": 2.1699016674272387,
+  "risky_handoff": {
+    "valid_consecutive_runs": 3,
+    "neeble_verified_actions": 0,
+    "neeble_trajectory_empty": true,
+    "safe_followup": "inspection-only get_title",
+    "verified_untouched_title": "Risky"
+  },
+  "privacy": {
+    "contains_prompts": false,
+    "contains_transcripts": false,
+    "contains_session_ids": false,
+    "contains_local_paths": false
+  }
+}

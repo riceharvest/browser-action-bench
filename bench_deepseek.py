@@ -24,6 +24,6 @@ def main():
    except Exception as e: err=str(e)
    rows.append({'prompt':prompt,'expected':expected,'ok':ok,'elapsed_ms':(time.perf_counter()-t)*1000,'error':err})
   browser.close()
- s={'backend':'openrouter/deepseek/deepseek-v4.1-flash','cases':len(rows),'verified_actions':sum(x['ok'] for x in rows),'success_rate':sum(x['ok'] for x in rows)/len(rows),'latency_ms_mean':statistics.mean(x['elapsed_ms'] for x in rows),'latency_ms_p50':statistics.median(x['elapsed_ms'] for x in rows),'actions_per_minute':len(rows)/(sum(x['elapsed_ms'] for x in rows)/60000)}
+ s={'backend':'direct-openrouter/deepseek/deepseek-v4.1-flash+playwright','cases':len(rows),'verified_actions':sum(x['ok'] for x in rows),'success_rate':sum(x['ok'] for x in rows)/len(rows),'latency_ms_mean':statistics.mean(x['elapsed_ms'] for x in rows),'latency_ms_p50':statistics.median(x['elapsed_ms'] for x in rows),'actions_per_minute':len(rows)/(sum(x['elapsed_ms'] for x in rows)/60000),'excluded_from_timing':['Hermes startup','Hermes conversation loop','MCP dispatch','browser startup','browser state acquisition'],'note':'Direct provider microbenchmark only; not a normal Hermes/browser baseline.'}
  Path('results').mkdir(exist_ok=True);Path('results/deepseek-playwright.json').write_text(json.dumps({'summary':s,'runs':rows},indent=2)+'\n');print(json.dumps(s,indent=2))
 if __name__=='__main__':main()
